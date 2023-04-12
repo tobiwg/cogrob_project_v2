@@ -1,0 +1,6 @@
+<launch>
+	<include file="$(find panda_moveit_config)/launch/demo.launch"/>
+	<node name="vision" pkg="startup" type="vision.py"/>
+	<node name="Aruco_broadcast" pkg="startup" type="display_images_test.py"/>
+	<node name="move_node" pkg="startup" type="move_group_python_interface.py"/>
+</launch>
