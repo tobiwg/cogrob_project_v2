@@ -10,7 +10,7 @@
 
 ## Description
 
-#lligator Egg Collection Robot
+### Alligator Egg Collection Robot
 In commercial alligator farms, the harvesting of alligator eggs is a costly and dangerous operation. In existing solutions, human operators are typically suspended in the air and descended into the desired location using helicopters. The present project aims to develop a cognitive robot capable of harvesting alligator eggs.
 
 This repository contains code to control a robot designed to collect alligator eggs. The robot is equipped with a custom end effector designed to gently pick up and transport alligator eggs without damaging them.
@@ -47,7 +47,7 @@ rosrun startup start.launch
 ```
 ## Usage
 
-# WARNING: Alligator Egg Collection Robot
+### WARNING: Alligator Egg Collection Robot
 
 This repository contains code to control a robot for the purpose of picking up alligator eggs. Please be aware that the collection of alligator eggs is illegal in many areas and can have serious consequences for both the individual and the environment.
 
