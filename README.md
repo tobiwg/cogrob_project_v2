@@ -1,4 +1,5 @@
 # cogrob_project
+<img src="startup/darthgator.jpg" alt="darthgator" >
 
 ## Table of Contents
 
