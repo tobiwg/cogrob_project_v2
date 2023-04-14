@@ -5,6 +5,7 @@
 
 - [Description](#description)
 - [Installation](#installation)
+- [Documentation](startup/scripts/documentation.md)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
