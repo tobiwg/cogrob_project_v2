@@ -5,12 +5,12 @@ In commercial alligator farms, the harvesting of alligator eggs is a costly and 
 
 Figure 1. Crocoloco Farm, HaArava, Israel (left); Ingwelala, NZ (right).
 ## Table of Contents
-- [World Simulation](#World Simulation)
-- [SLAM Operation](#SLAM Operation)
-- [Localization and Navigation](#Localization and Navigation)
-- [Arm inverse kinematics using MoveIt](#Arm inverse kinematics using MoveIt)
-- [Computer Vision](#Computer Vision)
-- [Preparing the virtual environment (RViz)](#Preparing the virtual environment (RViz))
+- [World Simulation] (#world-simulation)
+- [SLAM Operation] (#SLAM-operation)
+- [Localization and Navigation] (#Localization and Navigation)
+- [Arm inverse kinematics using MoveIt] (#Arm inverse kinematics using MoveIt)
+- [Computer Vision] (#Computer Vision)
+- [Preparing the virtual environment (RViz)] (#Preparing the virtual environment (RViz))
 - [References](#References)
 
 ## World Simulation
