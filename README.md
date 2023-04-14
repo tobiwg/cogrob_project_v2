@@ -4,6 +4,7 @@
 ## Table of Contents
 
 - [Description](#description)
+- [Report](#report.md)
 - [Installation](#installation)
 - [Documentation](startup/scripts/documentation.md)
 - [Usage](#usage)
