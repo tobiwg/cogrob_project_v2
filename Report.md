@@ -1,6 +1,8 @@
 ## Problem Definition
 In commercial alligator farms, the harvesting of alligator eggs is a costly and dangerous operation. In existing solutions, human operators are typically suspended in the air and descended into the desired location using helicopters. The present project aims to develop a cognitive robot capable of harvesting alligator eggs. 
 
+<img src="images/figure1.png"  >
+
 Figure 1. Crocoloco Farm, HaArava, Israel (left); Ingwelala, NZ (right).
 ## Table of Contents
 - [World Simulation](#World Simulation)
@@ -16,34 +18,36 @@ Since we do not have access to a physical alligator farm environment, we design 
 
 In the process of designing the Gazebo environment, we experienced technical errors in the process of importing external STL models, as such we were limited to the built-in 3D model components in Gazebo. Further, our graphical computation power limits the size of the world we can simulate. 
 
+<img src="images/figure2.png"  >
+
 Figure 2. Simulated alligator farm environment in Gazebo.
 ## SLAM Operation
 Using a TurtleBot equipped with a laser sensor, we perform Simultaneous Localization and Mapping (SLAM) operation on the Gazebo-simulated alligator farm environment using the GMapping package and visualise it in RViz.
 
 By placing the robot in the simulated environment and by teleoping the robot around, we created a 2D occupancy grid map in the format of a .pgm image file and a .yaml file. We save the map files for future navigation purposes. 
 
-
-Figure 2. 2D occupancy grid map visualised in RViz
+<img src="images/figure3.png"  >
+Figure 3. 2D occupancy grid map visualised in RViz
 ## Localization and Navigation
 Using the map obtained in the previous section, which is broadcasted by the map_server package as a ROS service, we provide a 2D pose estimate and teleoping the robot around to perform localization using amcl. 
 
 We then provide a navigation goal, i.e. the location of the alligator egg. Path planning is performed using move_base and the robot is navigated to the egg location, upon which it will perform the egg harvesting procedure. Visualisation in RViz.
 
-
-Figure 3. Robot in navigation, visualised in RViz.
+<img src="images/figure4.png"  >
+Figure 4. Robot in navigation, visualised in RViz.
 
 
 ## Arm inverse kinematics using MoveIt
 Robot arm inverse kinematics is a crucial aspect of robot motion planning that involves calculating the joint angles required to position the end effector of a robot arm at a desired location in space. We used it to solve the inverse kinematics problem for a 6-degree-of-freedom robot arm. The objective was to move the end effector of the robot arm to a desired position and orientation in space. We first created a MoveIt package for our robot arm, which included the robot description, joint limits, and kinematic solver. We then used the MoveIt RViz plugin to visualize the robot arm and define the desired end effector pose. Finally, we utilized MoveIt's inverse kinematics solver to generate joint angles for the robot arm, allowing it to reach the desired pose.  we define a set of goal state for the robot arm, such as the desired end effector position and orientation to collect the egg, and the software will automatically calculate the joint angles necessary to achieve those goals. 
 
-
-Figure 4. Panda Robot arm (6 DOF) and the egg in RViz environment
+<img src="images/figure5.jpeg"  >
+Figure 5. Panda Robot arm (6 DOF) and the egg in RViz environment
 
 
 Steps: 
-Locating the egg with CV
-Calculation of the IK using rviz to collect the egg in the desired pose from the CV publisher.
-Extension of the arm, grabbing motion and retracting
+1. Locating the egg with CV
+2. Calculation of the IK using rviz to collect the egg in the desired pose from the CV publisher.
+3. Extension of the arm, grabbing motion and retracting
 
 
 ## Computer Vision
@@ -51,15 +55,15 @@ In our project, we faced the challenge of locating an egg in a visual scene with
 
 
 
-
-Figure 5. Virtual arUco marker placed on the egg and the position and orientation vector respect to the virtual camera.
+<img src="images/figure6.jpeg"  >
+Figure 6. Virtual arUco marker placed on the egg and the position and orientation vector respect to the virtual camera.
 
 ## Preparing the virtual environment (RViz)
 An unexpected challege came from creting the virtual environment RViz in order to add the ArUco marker we had to use a library called rviz_textured_quads by lucasw that creates a mesh in RViz that subscribes to an image topic, and then create a node that publishes the image using the CV_bridge mentioned before to convert from RGB to Image topic message. Then something similar to create the camera publisher we referenced to a package  rviz_camera_stream that creates the camera publisher node and lastly we created a node to add the egg mesh dynamically based on moveit python interface source code, we had to dig deep in order to find a way to add meshes dynamically to RViz, and something that we couldnt do is add the appropriate colliders in order for the arm to be able to pick up the egg mesh.
-
+<img src="images/figure7.jpeg"  >
 Figure 6. Cv_bridge scheme
 
-
+<img src="images/demo_rviz.gif>
 Figure 7.Rviz Mesh streaming demo from lucasw
 ## References
 ROS packages: move_base, amcl, map_server, turtlebot3_gazebo, turtlebot3_teleop, turtlebot3_navigation, gmapping, spawn_urdf, controller_spawner, robot_state_publisher
