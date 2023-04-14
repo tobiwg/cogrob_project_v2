@@ -94,9 +94,13 @@ roslaunch turtlebot3_gazebo turtlebot3_world.launch
 roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map.yaml
 ```
 [Lucas W. rviz_textured_quads [Internet]. GitHub; 2019 [cited 2023 Apr 15].](https://github.com/lucasw/rviz_textured_quads)
+
 [Lucas W. rviz_camera_stream [Internet]. GitHub; 2020 [cited 2023 Apr 15].](https://github.com/lucasw/rviz_camera_stream)
+
 [ROS-Planning. moveit_tutorials [Internet]. GitHub; 2021 [cited 2023 Apr 15].](https://github.com/ros-planning/moveit_tutorials/tree/master/doc/move_group_python_interface)
+
 [OpenCV. ArUco Detection [Internet]. OpenCV documentation; 2021 [cited 2023 Apr 15].](https://docs.opencv.org/4.x/d5/dae/tutorial_aruco_detection.html)
+
 [ROS. Converting between ROS images and OpenCV images (Python) [Internet]. ROS Wiki; 2021 [cited 2023 Apr 15].](http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython)
 
 
