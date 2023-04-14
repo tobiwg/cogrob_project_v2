@@ -1,3 +1,14 @@
+# Cognitive Robotics - Project Report
+
+- Ilan Ancelseritcioglu 941190746
+
+- Tobias Weinberg 941190431
+
+- Jordan Fung 941190753
+
+- Jainik Mehta 941190720
+
+
 ## Problem Definition
 In commercial alligator farms, the harvesting of alligator eggs is a costly and dangerous operation. In existing solutions, human operators are typically suspended in the air and descended into the desired location using helicopters. The present project aims to develop a cognitive robot capable of harvesting alligator eggs. 
 
@@ -5,13 +16,13 @@ In commercial alligator farms, the harvesting of alligator eggs is a costly and 
 
 Figure 1. Crocoloco Farm, HaArava, Israel (left); Ingwelala, NZ (right).
 ## Table of Contents
-- [World Simulation] (#world-simulation)
-- [SLAM Operation] (#SLAM-operation)
-- [Localization and Navigation] (#Localization and Navigation)
-- [Arm inverse kinematics using MoveIt] (#Arm inverse kinematics using MoveIt)
-- [Computer Vision] (#Computer Vision)
-- [Preparing the virtual environment (RViz)] (#Preparing the virtual environment (RViz))
-- [References](#References)
+- [World Simulation](#world-simulation)
+- [SLAM Operation](#slam-operation)
+- [Localization and Navigation](#localization-and-navigation)
+- [Arm inverse kinematics using MoveIt](#arm-inverse-kinematics-using-moveit)
+- [Computer Vision](#computer-vision)
+- [Preparing the virtual environment (RViz)](#preparing-the-virtual-environment-rviz)
+- [References](#references)
 
 ## World Simulation
 Since we do not have access to a physical alligator farm environment, we design a simulated environment using Gazebo. The environment comprises a fenced off environment where various types of obstacles are scattered around. The goal alligator egg is positioned at one corner while the robot starting position is at another. 
@@ -28,7 +39,9 @@ By placing the robot in the simulated environment and by teleoping the robot aro
 
 <img src="images/figure3.png"  >
 Figure 3. 2D occupancy grid map visualised in RViz
+
 ## Localization and Navigation
+
 Using the map obtained in the previous section, which is broadcasted by the map_server package as a ROS service, we provide a 2D pose estimate and teleoping the robot around to perform localization using amcl. 
 
 We then provide a navigation goal, i.e. the location of the alligator egg. Path planning is performed using move_base and the robot is navigated to the egg location, upon which it will perform the egg harvesting procedure. Visualisation in RViz.
@@ -60,10 +73,14 @@ Figure 6. Virtual arUco marker placed on the egg and the position and orientatio
 
 ## Preparing the virtual environment (RViz)
 An unexpected challege came from creting the virtual environment RViz in order to add the ArUco marker we had to use a library called rviz_textured_quads by lucasw that creates a mesh in RViz that subscribes to an image topic, and then create a node that publishes the image using the CV_bridge mentioned before to convert from RGB to Image topic message. Then something similar to create the camera publisher we referenced to a package  rviz_camera_stream that creates the camera publisher node and lastly we created a node to add the egg mesh dynamically based on moveit python interface source code, we had to dig deep in order to find a way to add meshes dynamically to RViz, and something that we couldnt do is add the appropriate colliders in order for the arm to be able to pick up the egg mesh.
+
 <img src="images/figure7.jpeg"  >
+
 Figure 6. Cv_bridge scheme
 
-<img src="images/demo_rviz.gif>
+![](https://github.com/tobiwg/cogrob_project_v2/blob/main/images/rviz_demo.gif)
+
+
 Figure 7.Rviz Mesh streaming demo from lucasw
 ## References
 ROS packages: move_base, amcl, map_server, turtlebot3_gazebo, turtlebot3_teleop, turtlebot3_navigation, gmapping, spawn_urdf, controller_spawner, robot_state_publisher
