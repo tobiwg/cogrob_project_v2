@@ -1,4 +1,5 @@
-##add_egg.py
+## add_egg.py
+
 The script uses the MoveIt! Python API to interface with MoveIt! and adds an "egg" object to the planning scene.
 
 The MoveGroupPythonInterfaceTutorial class is defined and the necessary modules and packages are imported. In the constructor, the moveit_commander and rospy nodes are initialized, and instances of RobotCommander, PlanningSceneInterface, and MoveGroupCommander are created. The wait_for_state_update and add_egg methods are defined in the class.
