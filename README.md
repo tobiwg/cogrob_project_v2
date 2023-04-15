@@ -59,6 +59,7 @@ Next, navigate to the `ws_moveit/src/startup/scripts` folder and run the followi
 chmod +x vision.py
 chmod +x move_group_python_interface.py
 chmod +x display_images_test.py
+chmod +x add_egg.py
 ```
 Return to the `ws_moveit` folder and run the following command:
 ```
