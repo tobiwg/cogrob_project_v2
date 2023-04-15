@@ -32,6 +32,12 @@ If you have any questions or concerns regarding the use of this code, please ref
 
 ## Videos
 
+
+<video src="https://youtu.be/_rQWQlsRhBs" width=180></video>
+
+full demo
+
+
 https://user-images.githubusercontent.com/43245776/232201021-949b41e8-7d73-4129-9a64-da6a6016cbe6.mp4
 
 Arm secuence video demo
