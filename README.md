@@ -1,12 +1,16 @@
 # cogrob_project
 <img src="startup/darthgator.jpg" alt="darthgator" >
 
+
 ## Table of Contents
+
+
 
 - [Description](#description)
 - [Report](/Report.md)
+- [Videos](#videos)
 - [Installation](#installation)
-- [Documentation](startup/scripts/documentation.md)
+- [Documentation](/documentation.md)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -25,6 +29,23 @@ Please note that the collection of alligator eggs is illegal in many areas and c
 This code was developed as part of a research project aimed at studying the impact of alligator egg collection on alligator populations. The robot is intended to provide a safer and more efficient method of collecting alligator eggs for research purposes, without putting human researchers or alligator populations at risk.
 
 If you have any questions or concerns regarding the use of this code, please refer to the warning message in the repository or contact the repository owners for more information.
+
+## Videos
+
+[![](https://user-images.githubusercontent.com/43245776/232211585-4c60751d-dcbd-4aeb-94d0-d29c8215b72c.png)](https://www.youtube.com/watch?v=_rQWQlsRhBs&ab_channel=TobiasWeinberg)
+full demo
+
+
+https://user-images.githubusercontent.com/43245776/232201021-949b41e8-7d73-4129-9a64-da6a6016cbe6.mp4
+
+Arm secuence video demo
+
+
+
+https://user-images.githubusercontent.com/43245776/232201206-9d8e1e0e-6fed-4d9e-baa7-0da28ee9fde1.mp4
+
+ArUco markers pose estimation with openCV from camera feed
+
 ## Installation
 
 To use this package, you must first install ROS1 (noetic) and the MoveIt framework. Refer to the [MoveIt installation guide](https://moveit.ros.org/install/) for instructions.
