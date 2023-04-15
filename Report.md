@@ -49,7 +49,6 @@ We then provide a navigation goal, i.e. the location of the alligator egg. Path 
 <img src="images/figure4.png"  >
 Figure 4. Robot in navigation, visualised in RViz.
 
-
 ## Arm inverse kinematics using MoveIt
 Robot arm inverse kinematics is a crucial aspect of robot motion planning that involves calculating the joint angles required to position the end effector of a robot arm at a desired location in space. We used it to solve the inverse kinematics problem for a 6-degree-of-freedom robot arm. The objective was to move the end effector of the robot arm to a desired position and orientation in space. We first created a MoveIt package for our robot arm, which included the robot description, joint limits, and kinematic solver. We then used the MoveIt RViz plugin to visualize the robot arm and define the desired end effector pose. Finally, we utilized MoveIt's inverse kinematics solver to generate joint angles for the robot arm, allowing it to reach the desired pose.  we define a set of goal state for the robot arm, such as the desired end effector position and orientation to collect the egg, and the software will automatically calculate the joint angles necessary to achieve those goals. 
 
@@ -103,6 +102,6 @@ roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map
 
 [ROS. Converting between ROS images and OpenCV images (Python) [Internet]. ROS Wiki; 2021 [cited 2023 Apr 15].](http://wiki.ros.org/cv_bridge/Tutorials/ConvertingBetweenROSImagesAndOpenCVImagesPython)
 
-
+##Link to full video -https://drive.google.com/drive/folders/1qHK0DNkmNLxQGT6BtVzxfcosEwhXYplO?usp=share_link 
 
 
