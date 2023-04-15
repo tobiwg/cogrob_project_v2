@@ -25,6 +25,13 @@ Figure 1. Crocoloco Farm, HaArava, Israel (left); Ingwelala, NZ (right).
 - [References](#references)
 
 ## World Simulation
+
+Step 1 - After you have copied the contents given in the turtlebot package to your workspace and performed catkin_make type this command -
+
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
+
+This will launch the world file in Gazebo with predesigned world.
+
 Since we do not have access to a physical alligator farm environment, we design a simulated environment using Gazebo. The environment comprises a fenced off environment where various types of obstacles are scattered around. The goal alligator egg is positioned at one corner while the robot starting position is at another. 
 
 In the process of designing the Gazebo environment, we experienced technical errors in the process of importing external STL models, as such we were limited to the built-in 3D model components in Gazebo. Further, our graphical computation power limits the size of the world we can simulate. 
@@ -33,14 +40,30 @@ In the process of designing the Gazebo environment, we experienced technical err
 
 Figure 2. Simulated alligator farm environment in Gazebo.
 ## SLAM Operation
+
+Step 2 - Copy the below mentioned commands in two different terminals
+
+roslaunch turtlebot3_gazebo turtlebot3_slam.launch slam_methods:=gmapping
+
+roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch 
+
 Using a TurtleBot equipped with a laser sensor, we perform Simultaneous Localization and Mapping (SLAM) operation on the Gazebo-simulated alligator farm environment using the GMapping package and visualise it in RViz.
 
 By placing the robot in the simulated environment and by teleoping the robot around, we created a 2D occupancy grid map in the format of a .pgm image file and a .yaml file. We save the map files for future navigation purposes. 
+
+We save the map file using - (Make sure map_server package is install)
+rosrun map_server map_saver -f ~/map
 
 <img src="images/figure3.png"  >
 Figure 3. 2D occupancy grid map visualised in RViz
 
 ## Localization and Navigation
+
+We close all the windows and terminal opened previously and we again paste following commands in two different terminals -
+
+roslaunch turtlebot3_gazebo turtlebot3_world.launch
+
+roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map.yaml
 
 Using the map obtained in the previous section, which is broadcasted by the map_server package as a ROS service, we provide a 2D pose estimate and teleoping the robot around to perform localization using amcl. 
 
