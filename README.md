@@ -32,9 +32,7 @@ If you have any questions or concerns regarding the use of this code, please ref
 
 ## Videos
 
-
-<video src="https://youtu.be/_rQWQlsRhBs" width=180></video>
-
+[![](https://user-images.githubusercontent.com/43245776/232211585-4c60751d-dcbd-4aeb-94d0-d29c8215b72c.png)](https://www.youtube.com/watch?v=_rQWQlsRhBs&ab_channel=TobiasWeinberg)
 full demo
 
 
