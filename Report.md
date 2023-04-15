@@ -44,6 +44,7 @@ Figure 2. Simulated alligator farm environment in Gazebo.
 Step 2 - Copy the below mentioned commands in two different terminals
 
 roslaunch turtlebot3_gazebo turtlebot3_slam.launch slam_methods:=gmapping
+
 roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch 
 
 Using a TurtleBot equipped with a laser sensor, we perform Simultaneous Localization and Mapping (SLAM) operation on the Gazebo-simulated alligator farm environment using the GMapping package and visualise it in RViz.
@@ -61,6 +62,7 @@ Figure 3. 2D occupancy grid map visualised in RViz
 We close all the windows and terminal opened previously and we again paste following commands in two different terminals -
 
 roslaunch turtlebot3_gazebo turtlebot3_world.launch
+
 roslaunch turtlebot3_navigation turtlebot3_navigation.launch map_file:=$HOME/map.yaml
 
 Using the map obtained in the previous section, which is broadcasted by the map_server package as a ROS service, we provide a 2D pose estimate and teleoping the robot around to perform localization using amcl. 
