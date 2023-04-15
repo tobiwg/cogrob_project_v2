@@ -62,6 +62,7 @@ chmod +x display_images_test.py
 ```
 Return to the `ws_moveit` folder and run the following command:
 ```
+catkin_make
 source devel/setup.bash
 ```
 
